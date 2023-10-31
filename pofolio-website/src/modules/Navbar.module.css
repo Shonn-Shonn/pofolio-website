@@ -1,0 +1,48 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+
+.appHeader{
+    height: 600px;
+    background-image: url('https://unsplash.com/photos/a-bunch-of-pink-flowers-with-green-leaves-T4u0-xB4w0I');
+    background-repeat: no-repeat;
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    color:rgb(104, 39, 104);
+    background-position: center;
+}
+
+.navbar
+{
+    color: rgb(128, 25, 52);
+    font-weight: bold;
+    position: absolute;
+    top: 0%;
+    z-index: 2;
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+h1 
+{
+    padding: .5rem .8rem;
+}
+
+.ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+.li 
+{
+    width: 200px;
+    align-self: center;
+    font-weight:bold;
+    padding: .5rem .8rem;
+}
