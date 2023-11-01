@@ -1,0 +1,129 @@
+body
+{
+    min-height: 100vh;
+    background: url('https://cdn.pixabay.com/photo/2017/09/14/22/42/milky-way-2750627_1280.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,.1);
+    display: flex;
+    padding: .5rem;
+    justify-content:space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,.1);
+    backdrop-filter: blur(50px);
+    z-index: -1;
+}
+
+.logo
+{
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a 
+{
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+
+#check 
+{
+    display: none;
+}
+
+.icons
+{
+    position: absolute;
+    right:15%;
+    cursor: pointer;
+    display: none;
+}
+
+
+@media (max-width: 992px) {
+    .header
+    {
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header 
+    {
+        justify-content: space-between;
+    }
+    .icons 
+    {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #open-icon
+    {
+        display: none;
+    }
+
+    .icons #close-icon
+    {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon
+    {
+        display: block;
+    }
+
+    
+    .navbar
+    {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height:0;
+        background: rgba(0,0,0,0.1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        transition: .3s ease;
+        overflow: hidden;
+    }
+
+    #check:checked~.navbar
+    {
+        height: 17.7rem;
+    }
+
+    .navbar a 
+    {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(3px);
+    }
+
+   
+}
